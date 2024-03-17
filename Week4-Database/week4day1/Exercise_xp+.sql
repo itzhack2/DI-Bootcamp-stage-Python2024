@@ -1,0 +1,16 @@
+-- INSERT INTO students(first_name,last_name,birth_date)VALUES
+-- ('Marc','Benichou','1998-11-02'),
+-- 	('Yoan','Cohen','2010-12-03'),
+-- 	('Lea','Benichou','1987-07-27'),
+-- 	('Amelia','Dux','1996-04-07'),
+-- 	('David','Gerz','2003-06-14'),
+-- 	('Omer','Simpson','1980-10-03')
+-- SELECT*FROM students;
+-- INSERT INTO students(first_name,last_name,birth_date)VALUES('Ben','Mrejen','1986-04-27')
+-- SELECT*FROM students;
+-- SELECT first_name,last_name FROM students WHERE last_name='Benichou' OR first_name='Marc';
+-- SELECT first_name,last_name FROM students WHERE first_name LIKE '%a%';
+-- SELECT first_name,last_name FROM students WHERE first_name ILIKE '%a%';
+-- SELECT first_name,last_name FROM students WHERE (RIGHT(first_name,2)='a');
+-- SELECT first_name,last_name FROM students WHERE (RIGHT(first_name,2)LIKE 'a%');
+-- SELECT*FROM students WHERE (birth_date>='2000-01-01');
