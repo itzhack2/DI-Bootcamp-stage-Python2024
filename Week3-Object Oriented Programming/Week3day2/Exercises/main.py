@@ -1,3 +1,4 @@
+#Exercises XP 
 # 🌟 Exercise 1 : Pets
 # class Pets():
 #     def __init__(self, animals):
