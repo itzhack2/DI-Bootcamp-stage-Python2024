@@ -1,3 +1,15 @@
+
+# Challenge 1
+def create_index_dictionary(word):
+    index_dict = {}
+    for index, letter in enumerate(word):
+        if letter in index_dict:
+            index_dict[letter].append(index)
+        else:
+            index_dict[letter] = [index]
+    return index_dict
+
+# Challenge 2
 items_purchase = {
   "Water": "$1",
   "Bread": "$3",

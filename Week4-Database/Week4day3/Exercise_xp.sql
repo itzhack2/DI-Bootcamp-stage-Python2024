@@ -1,0 +1,24 @@
+-- 🌟 Exercise 1: DVD Rental
+-- SELECT * FROM language;
+-- SELECT * from film ;
+-- SELECT * FROM film LEFT JOIN language ON film.language_id=language.language_id;
+-- SELECT * language.name, film.title, film.description,  FROM film RIGHT JOIN language ON film.language_id=language.language_id ;
+-- CREATE TABLE new_film (
+-- 	id SERIAL PRIMARY KEY,
+-- 	name VARCHAR(100)
+-- )
+-- SELECT * FROM new_film
+--  CREATE TABLE customer_review (
+--  review_id SERIAL PRIMARY KEY NOT NULL,
+--  film_id INT NOT NULL, 
+--  language_id INT NOT NULL,
+--  title VARCHAR(100) NOT NULL,
+--  score INT NOT NULL,
+--  review_text Text, 
+--  last_update TIMESTAMP,
+	 
+--  CONSTRAINT fk_language_id FOREIGN KEY (language_id) REFERENCES language(language_id),
+--  CONSTRAINT fk_flim_id FOREIGN KEY (film_id) REFERENCES new_film(id) ON DELETE CASCADE,  
+--  CONSTRAINT score_value CHECK (score > 0 AND score <= 10 )
+--  )
+-- SELECT * FROM NEW_film

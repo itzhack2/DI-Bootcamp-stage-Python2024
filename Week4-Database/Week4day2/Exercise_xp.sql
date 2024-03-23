@@ -1,0 +1,35 @@
+-- Exercises XP
+-- 🌟 Exercise 1 : Items And Customers
+-- INSERT INTO items(name,price) VALUES('small desk',100);
+-- INSERT INTO items(name,price) VALUES('Large desk',300);
+-- INSERT INTO items(name,price) VALUES('fan',80);
+-- SELECT*FROM items ORDER BY price ASC
+-- SELECT*FROM items WHERE (price>=80) ORDER BY price DESC	
+-- CREATE TABLE customers(
+-- 	id SERIAL PRIMARY KEY,
+-- 	fisrt_name VARCHAR(100)	NOT NULL,
+-- 	last_name VARCHAR(100) NOT NULL
+-- )
+-- INSERT INTO customers(fisrt_name,last_name) VALUES('Greg','Jones');
+-- INSERT INTO customers(fisrt_name,last_name) VALUES('Sandra','Jones');
+-- INSERT INTO customers(fisrt_name,last_name) VALUES('Scott','Scott');
+-- INSERT INTO customers(fisrt_name,last_name) VALUES('trevor','Green');
+-- INSERT INTO customers(fisrt_name,last_name) VALUES('Melanie','Johnson');
+-- SELECT*FROM customers
+-- SELECT*FROM customers ORDER BY fisrt_name ASC LIMIT 3
+-- SELECT	fisrt_name,last_name FROM	customers ORDER BY fisrt_name ASC LIMIT 3
+-- SELECT	last_name FROM	customers ORDER BY last_name DESC
+-- 🌟 Exercise 2 : Dvdrental Database
+-- select * from customer
+-- select concat_WS('_',first_name, last_name) as full_name from customer
+-- select DISTINCT create_date from customer 
+-- SELECT * FROM customer order by first_name desc 
+-- select film_id, title, description, release_year, rental_rate  from film order by rental_rate asc
+-- select  * from customer INNER join address on customer.address_id=address.address_id where (district='Texas')
+-- select address,phone from customer INNER join address on customer.address_id=address.address_id where (district='Texas')
+-- select * from film where (film_id=150 or film_id=15)
+-- select film_id, title,description, length,rental_rate from film where (title='Breaking Home')
+-- select film_id, title,description, length,rental_rate from film where (title like'Br%')
+-- SELECT * FROM film ORDER BY rental_rate ASC LIMIT 10
+-- SELECT * FROM film ORDER BY rental_rate ASC fetch first 10 ROWS ONLY OFFSET 10
+-- SELECT payment.customer_id, first_name, last_name, amount, payment_date from customer INNER JOIN payment ON payment.customer_id=customer.customer_id order by payment.customer_id
