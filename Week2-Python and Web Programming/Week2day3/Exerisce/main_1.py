@@ -39,8 +39,6 @@ print(count)
 
 #passing list as arguments
 
-
-
 def selector_heat(names:list):
     for name in names:
         if name == "luna":
@@ -49,8 +47,6 @@ def selector_heat(names:list):
             print(f'welcome to Hogwarts,{name}')
 studnet = [ 'Harry','Hermione','Ron','luna']    
 selector_heat(studnet)
-
-
 
 matrix 
 

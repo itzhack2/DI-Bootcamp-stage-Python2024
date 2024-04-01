@@ -1,4 +1,3 @@
-
 # Challenge 1
 def create_index_dictionary(word):
     index_dict = {}
