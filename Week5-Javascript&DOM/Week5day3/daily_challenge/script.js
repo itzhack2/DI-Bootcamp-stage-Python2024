@@ -4,7 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const shuffleButton = document.getElementById('shuffle-button');
     form.addEventListener('submit', function(event) {
       event.preventDefault();
-      // Get values from input fields
+     
+        // Get values from input fields
       const noun = document.getElementById('noun').value.trim();
       const adjective = document.getElementById('adjective').value.trim();
       const person = document.getElementById('person').value.trim();
@@ -18,8 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // Generate story using the values
       const story = `Once upon a time, there was a ${adjective} ${noun} named ${person}. 
       ${person} loved to ${verb} in ${place}.`;
-  
-      // Display the story
+        
       storySpan.textContent = story;
     });
     // Array of possible stories
@@ -28,16 +28,12 @@ document.addEventListener('DOMContentLoaded', function() {
       '{person} found a {adjective} {noun} in {place}. {person} decided to {verb} it.',
       'In a {place} far far away, there lived a {adjective} {noun} named {person}. {person} always wanted to {verb}.'
     ];
-
-    // Shuffle function to shuffle the stories array
     function shuffle(array) {
       for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
       }
     }
-
-    // Event listener for shuffle button
     shuffleButton.addEventListener('click', function() {
       shuffle(stories);
       const storyIndex = Math.floor(Math.random() * stories.length);
