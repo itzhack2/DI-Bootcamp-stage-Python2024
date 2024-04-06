@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const shuffleButton = document.getElementById('shuffle-button');
     form.addEventListener('submit', function(event) {
       event.preventDefault();
-      
+
       const noun = document.getElementById('noun').value.trim();
       const adjective = document.getElementById('adjective').value.trim();
       const person = document.getElementById('person').value.trim();
@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
       
       const story = `Once upon a time, there was a ${adjective} ${noun} named ${person}. 
       ${person} loved to ${verb} in ${place}.`;
+  
+      // Display the story
       storySpan.textContent = story;
     });
 
@@ -26,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
       'In a {place} far far away, there lived a {adjective} {noun} named {person}. {person} always wanted to {verb}.'
     ];
 
+    // Shuffle function to shuffle the stories array
     function shuffle(array) {
       for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -33,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
 
+    // Event listener for shuffle button
     shuffleButton.addEventListener('click', function() {
       shuffle(stories);
       const storyIndex = Math.floor(Math.random() * stories.length);
