@@ -55,120 +55,121 @@
 // console.log("shopping list total price:", myBill())
 
 // Exercise 3: What’s In My Wallet ?
-function changeEnough(itemPrice, amountOfChange) {
-    const changeValues = [0.25, 0.1, 0.05, 0.01];
-    let totalChange = 0;
 
-    for (let i = 0; i < changeValues.length; i++) {
-        totalChange += amountOfChange[i] * changeValues[i];
-    }
+// function changeEnough(itemPrice, amountOfChange) {
+//     const changeValues = [0.25, 0.1, 0.05, 0.01];
+//     let totalChange = 0;
 
-    return totalChange >= itemPrice;
-}
+//     for (let i = 0; i < changeValues.length; i++) {
+//         totalChange += amountOfChange[i] * changeValues[i];
+//     }
 
-console.log(changeEnough(14.11, [2, 100, 0, 0])); // false
-console.log(changeEnough(0.75, [0, 0, 20, 5])); // true
+//     return totalChange >= itemPrice;
+// }
 
-// Exercise 4: Vacations Costs
-function hotelCost() {
-    let nights = prompt("How many nights would you like to stay in the hotel?");
-    while (isNaN(nights)) {
-        nights = prompt("Please enter a valid number of nights:");
-    }
-    return nights * 140;
-}
+// console.log(changeEnough(14.11, [2, 100, 0, 0])); // false
+// console.log(changeEnough(0.75, [0, 0, 20, 5])); // true
 
-function planeRideCost(destination) {
-    let cost;
-    switch (destination.toLowerCase()) {
-        case "london":
-            cost = 183;
-            break;
-        case "paris":
-            cost = 220;
-            break;
-        default:
-            cost = 300;
-    }
-    return cost;
-}
+// // Exercise 4: Vacations Costs
+// function hotelCost() {
+//     let nights = prompt("How many nights would you like to stay in the hotel?");
+//     while (isNaN(nights)) {
+//         nights = prompt("Please enter a valid number of nights:");
+//     }
+//     return nights * 140;
+// }
 
-function rentalCarCost() {
-    let days = prompt("How many days would you like to rent the car?");
-    while (isNaN(days)) {
-        days = prompt("Please enter a valid number of days:");
-    }
-    let cost = days * 40;
-    if (days > 10) {
-        cost *= 0.95; // 5% discount for more than 10 days
-    }
-    return cost;
-}
+// function planeRideCost(destination) {
+//     let cost;
+//     switch (destination.toLowerCase()) {
+//         case "london":
+//             cost = 183;
+//             break;
+//         case "paris":
+//             cost = 220;
+//             break;
+//         default:
+//             cost = 300;
+//     }
+//     return cost;
+// }
 
-function totalVacationCost() {
-    const hotel = hotelCost();
-    const destination = prompt("Where is your destination?");
-    const planeTicket = planeRideCost(destination);
-    const rentalCar = rentalCarCost();
-    return `The hotel cost: $${hotel}, the plane tickets cost: $${planeTicket}, the car rental cost: $${rentalCar}`;
-}
+// function rentalCarCost() {
+//     let days = prompt("How many days would you like to rent the car?");
+//     while (isNaN(days)) {
+//         days = prompt("Please enter a valid number of days:");
+//     }
+//     let cost = days * 40;
+//     if (days > 10) {
+//         cost *= 0.95; // 5% discount for more than 10 days
+//     }
+//     return cost;
+// }
 
-console.log(totalVacationCost());
+// function totalVacationCost() {
+//     const hotel = hotelCost();
+//     const destination = prompt("Where is your destination?");
+//     const planeTicket = planeRideCost(destination);
+//     const rentalCar = rentalCarCost();
+//     return `The hotel cost: $${hotel}, the plane tickets cost: $${planeTicket}, the car rental cost: $${rentalCar}`;
+// }
 
-// Exercise 5: Users
-const container = document.getElementById("container");
-console.log(container);
+// console.log(totalVacationCost());
 
-const lists = document.querySelectorAll(".list");
-lists.forEach(list => {
-    list.firstElementChild.textContent = "Your Name";
-});
+// // Exercise 5: Users
+// const container = document.getElementById("container");
+// console.log(container);
 
-const firstUL = document.querySelector("ul");
-firstUL.classList.add("student_list", "university", "attendance");
+// const lists = document.querySelectorAll(".list");
+// lists.forEach(list => {
+//     list.firstElementChild.textContent = "Your Name";
+// });
 
-const secondLI = firstUL.lastElementChild;
-secondLI.style.border = "2px solid black";
+// const firstUL = document.querySelector("ul");
+// firstUL.classList.add("student_list", "university", "attendance");
 
-const body = document.querySelector("body");
-body.style.fontSize = "18px";
+// const secondLI = firstUL.lastElementChild;
+// secondLI.style.border = "2px solid black";
 
-// Bonus
-if (container.style.backgroundColor === "lightblue") {
-    alert("Hello x and y");
-}
+// const body = document.querySelector("body");
+// body.style.fontSize = "18px";
 
-// Exercise 6: Change The Navbar
-const navBar = document.getElementById("navBar");
-navBar.setAttribute("id", "socialNetworkNavigation");
+// // Bonus
+// if (container.style.backgroundColor === "lightblue") {
+//     alert("Hello x and y");
+// }
 
-const newLi = document.createElement("li");
-const textNode = document.createTextNode("Logout");
-newLi.appendChild(textNode);
-const ul = navBar.querySelector("ul");
-ul.appendChild(newLi);
+// // Exercise 6: Change The Navbar
+// const navBar = document.getElementById("navBar");
+// navBar.setAttribute("id", "socialNetworkNavigation");
 
-const firstLi = ul.firstElementChild;
-const lastLi = ul.lastElementChild;
-console.log(firstLi.textContent, lastLi.textContent);
+// const newLi = document.createElement("li");
+// const textNode = document.createTextNode("Logout");
+// newLi.appendChild(textNode);
+// const ul = navBar.querySelector("ul");
+// ul.appendChild(newLi);
 
-// Exercise 7: My Book List
-const section = document.querySelector(".listBooks");
+// const firstLi = ul.firstElementChild;
+// const lastLi = ul.lastElementChild;
+// console.log(firstLi.textContent, lastLi.textContent);
 
-const allBooks = [
-    { title: "Book 1", author: "Author 1", image: "https://via.placeholder.com/100", alreadyRead: true },
-    { title: "Book 2", author: "Author 2", image: "https://via.placeholder.com/100", alreadyRead: false }
-];
+// // Exercise 7: My Book List
+// const section = document.querySelector(".listBooks");
 
-allBooks.forEach(book => {
-    const div = document.createElement("div");
-    div.innerHTML = `<p>Title: ${book.title}</p><p>Author: ${book.author}</p>`;
-    const image = document.createElement("img");
-    image.src = book.image;
-    image.style.width = "100px";
-    if (book.alreadyRead) {
-        div.style.color = "red";
-    }
-    div.appendChild(image);
-    section.appendChild(div);
-});
+// const allBooks = [
+//     { title: "Book 1", author: "Author 1", image: "https://via.placeholder.com/100", alreadyRead: true },
+//     { title: "Book 2", author: "Author 2", image: "https://via.placeholder.com/100", alreadyRead: false }
+// ];
+
+// allBooks.forEach(book => {
+//     const div = document.createElement("div");
+//     div.innerHTML = `<p>Title: ${book.title}</p><p>Author: ${book.author}</p>`;
+//     const image = document.createElement("img");
+//     image.src = book.image;
+//     image.style.width = "100px";
+//     if (book.alreadyRead) {
+//         div.style.color = "red";
+//     }
+//     div.appendChild(image);
+//     section.appendChild(div);
+// });
