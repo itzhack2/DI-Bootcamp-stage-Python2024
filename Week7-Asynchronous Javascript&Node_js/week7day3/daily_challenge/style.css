@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    height: 100vh;
+    background-color: darkgray;
+    display: grid;
+    place-items: center;
+}
+.Converet{
+    border: 1px solid black;
+    border-radius: 2rem;
+    box-shadow: 0 0 10px 2px rgb(28, 28, 28 , 0.1);
+    padding: 2rem 5em;
+    text-align: center;
+}
